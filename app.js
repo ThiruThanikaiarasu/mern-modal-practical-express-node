@@ -5,6 +5,8 @@ const PORT = 3500
 const employee = require('./routers/employeeRouter')
 const mongoose = require('mongoose')
 
+app.use(express.json())
+
 mongoose.connect(process.env.DB_URL)
 const db = mongoose.connection
 
